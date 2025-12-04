@@ -1,0 +1,113 @@
+/* ===== GLOBAL NEON SETUP ===== */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: #000; /* Solid black background */
+    color: #fff;
+}
+
+/* ===== MAIN CONTAINER ===== */
+.container {
+    width: 420px;
+    margin: 80px auto;
+    padding: 20px;
+    backdrop-filter: blur(20px);
+    border-radius: 20px;
+    box-shadow: 0 0 25px #0ff5;
+    border: 1px solid #0ff5;
+    background: #0004;
+    animation: fadeIn 1.5s ease-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.neon-title {
+    text-align: center;
+    font-size: 2.1rem;
+    color: #0ff;
+    text-shadow: 0 0 15px #0ff, 0 0 40px #0ff;
+}
+
+/* ===== INPUT BOX ===== */
+.input-box {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+#taskInput {
+    flex: 1;
+    padding: 12px;
+    border: none;
+    outline: none;
+    background: #000;
+    color: #0ff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #0ff5 inset;
+}
+
+#addBtn {
+    padding: 12px 18px;
+    border: none;
+    cursor: pointer;
+    background: #0ff;
+    color: #000;
+    font-weight: bold;
+    border-radius: 10px;
+    box-shadow: 0 0 20px #0ff;
+    transition: 0.3s;
+}
+
+#addBtn:hover {
+    background: #fff;
+    box-shadow: 0 0 25px #fff;
+}
+
+/* ===== TASK LIST ===== */
+ul {
+    padding: 0;
+}
+
+li {
+    list-style: none;
+    margin: 12px 0;
+    padding: 12px;
+    background: #0006;
+    border: 1px solid #0ff5;
+    border-radius: 10px;
+    box-shadow: 0 0 15px #0ff3;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    animation: pop 0.4s ease;
+}
+
+@keyframes pop {
+    from { opacity: 0; transform: scale(0.6); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+li span {
+    flex: 1;
+    cursor: pointer;
+}
+
+.completed {
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+
+.edit-btn, .delete-btn {
+    background: transparent;
+    border: none;
+    color: #0ff;
+    cursor: pointer;
+    margin-left: 8px;
+    font-size: 18px;
+}
+.edit-btn:hover { color: #fff; }
+.delete-btn:hover { color: #f00; }
