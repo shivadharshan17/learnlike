@@ -1,4 +1,4 @@
-/* ===== GLOBAL NEON SETUP ===== */
+/* ===== GLOBAL CLEAN SETUP ===== */
 body {
     margin: 0;
     padding: 0;
@@ -14,9 +14,8 @@ body {
     padding: 20px;
     backdrop-filter: blur(20px);
     border-radius: 20px;
-    box-shadow: 0 0 25px #0ff5;
-    border: 1px solid #0ff5;
-    background: #0004;
+    border: 1px solid #444;   /* Removed neon border */
+    background: #111;         /* Removed glow transparency */
     animation: fadeIn 1.5s ease-out;
 }
 
@@ -28,8 +27,8 @@ body {
 .neon-title {
     text-align: center;
     font-size: 2.1rem;
-    color: #0ff;
-    text-shadow: 0 0 15px #0ff, 0 0 40px #0ff;
+    color: #0ff;              /* You can change if needed */
+    text-shadow: none;        /* Removed glow */
 }
 
 /* ===== INPUT BOX ===== */
@@ -42,12 +41,11 @@ body {
 #taskInput {
     flex: 1;
     padding: 12px;
-    border: none;
+    border: 1px solid #333;   /* Removed inner glow */
     outline: none;
     background: #000;
     color: #0ff;
     border-radius: 10px;
-    box-shadow: 0 0 10px #0ff5 inset;
 }
 
 #addBtn {
@@ -58,13 +56,11 @@ body {
     color: #000;
     font-weight: bold;
     border-radius: 10px;
-    box-shadow: 0 0 20px #0ff;
     transition: 0.3s;
 }
 
 #addBtn:hover {
-    background: #fff;
-    box-shadow: 0 0 25px #fff;
+    background: #fff;         /* Clean hover */
 }
 
 /* ===== TASK LIST ===== */
@@ -76,10 +72,9 @@ li {
     list-style: none;
     margin: 12px 0;
     padding: 12px;
-    background: #0006;
-    border: 1px solid #0ff5;
+    background: #111;
+    border: 1px solid #333;   /* Clean border */
     border-radius: 10px;
-    box-shadow: 0 0 15px #0ff3;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -101,6 +96,7 @@ li span {
     opacity: 0.5;
 }
 
+/* ===== ICON BUTTONS ===== */
 .edit-btn, .delete-btn {
     background: transparent;
     border: none;
@@ -109,5 +105,6 @@ li span {
     margin-left: 8px;
     font-size: 18px;
 }
+
 .edit-btn:hover { color: #fff; }
 .delete-btn:hover { color: #f00; }
